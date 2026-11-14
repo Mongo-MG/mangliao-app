@@ -1,5 +1,8 @@
+# 芒果工作室 mongo · 芒聊 APK 自动构建（push 或手动都会出包）
 name: Build MangLiao APK
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
 jobs:
   build:
     runs-on: ubuntu-latest
