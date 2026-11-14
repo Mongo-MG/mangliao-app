@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Fetch project
         run: |
-          curl -sSL -o project.zip https://aka.doubaocdn.com/s/3vyscmbeUp
+          curl -sSL -o project.zip https://aka.doubaocdn.com/s/6ZdaqKnmp0
           mkdir -p project
           unzip -q project.zip -d project
       - name: Setup JDK
