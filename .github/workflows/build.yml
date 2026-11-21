@@ -13,7 +13,7 @@ jobs:
 
       - name: Sync project from CDN
         run: |
-          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/BzdHjEU7Vo"
+          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/sKPGRDAtR2"
           unzip -o -q project.zip -d .
           rm -f project.zip
           echo synced
