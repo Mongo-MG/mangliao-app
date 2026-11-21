@@ -13,7 +13,7 @@ jobs:
 
       - name: Sync project from CDN
         run: |
-          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/e8qnirKMQB"
+          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/EBVK2Zkd8J"
           unzip -o -q project.zip -d .
           rm -f project.zip
           echo synced
@@ -31,7 +31,7 @@ jobs:
           gradle-version: 8.4
 
       - name: Build release APK
-        run: gradle :app:assembleRelease --no-daemon
+        run: gradle :app:assembleRelease --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
