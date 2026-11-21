@@ -13,7 +13,7 @@ jobs:
 
       - name: Sync project from CDN
         run: |
-          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/ceNWvKClWd"
+          curl -L --retry 3 --retry-delay 2 -o project.zip "https://aka.doubaocdn.com/s/9w1Pws9mGl"
           unzip -o -q project.zip -d .
           rm -f project.zip
           echo synced
@@ -30,12 +30,12 @@ jobs:
         with:
           gradle-version: 8.4
 
-      - name: Build debug APK
-        run: gradle :app:assembleDebug --no-daemon
+      - name: Build release APK
+        run: gradle :app:assembleRelease --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MongoLiao-APK
-          path: app/build/outputs/apk/debug/*.apk
+          path: app/build/outputs/apk/release/*.apk
           if-no-files-found: error
